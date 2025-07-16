@@ -1,33 +1,14 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
-
-int main()
-{
-    double result, numer, denom;
-
-    cout << "Enter value: ";
-    cin >> numer;
-
-    cout << "Enter divisor: ";
-    cin >> denom;
-
-    if (denom !=0)
-    {
-        cout << "divisor does not equal zero, so division is OK\n";
-        result = numer/denom;
-        cout << "Result: "<< result <<endl;
-        /* code */
+int main() {
+    cout << "Earth\tMoon\n";
+    for (int i = 1; i <= 100; ++i)
+     {
+        double moonWeight = i * 0.17;
+        cout << setw(5) << i << "\t" << fixed << setprecision(2) << moonWeight << "\n";
+        if (i % 25 == 0) cout << endl;
     }
-    else
-    {
-        cout << "Divisor equals zero, so we don't do anything"<< endl;
-    }
-    
-
     return 0;
-      
 }
-
-
