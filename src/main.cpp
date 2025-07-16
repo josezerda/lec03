@@ -2,26 +2,32 @@
 
 using namespace std;
 
-int square (int x)
-{
-    int valor = x;
-    for (int i = 1; i < x; i++)
-    {
-        valor += x;
-        /* code */
-    }
-    return valor;
-}
-
 
 int main()
 {
+    double result, numer, denom;
 
-    int num = 0;
-    cout << "Ingrese un numero: ";
-    cin >> num;
-    cout << "El cuadrado de: "<< num << " es: "<< square(num) <<endl;
-  
+    cout << "Enter value: ";
+    cin >> numer;
+
+    cout << "Enter divisor: ";
+    cin >> denom;
+
+    if (denom !=0)
+    {
+        cout << "divisor does not equal zero, so division is OK\n";
+        result = numer/denom;
+        cout << "Result: "<< result <<endl;
+        /* code */
+    }
+    else
+    {
+        cout << "Divisor equals zero, so we don't do anything"<< endl;
+    }
+    
+
+    return 0;
+      
 }
 
 
