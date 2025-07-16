@@ -1,18 +1,27 @@
 #include <iostream>
 
+using namespace std;
+
+int square (int x)
+{
+    int valor = x;
+    for (int i = 1; i < x; i++)
+    {
+        valor += x;
+        /* code */
+    }
+    return valor;
+}
+
+
 int main()
 {
-    std::cout << "Please enter your name and surname:\n";
-    std::string first_name;
-    std::string last_name;
-    std::string name;
-    double age = -1; // integer variable (-1 means "don’t know the age")
-    std::cin >> first_name >> last_name;
-    name = first_name + ' ' + last_name;
-    std::cout << "Nombre: " << first_name << std::endl;
-    std::cout << "Apellido: " << last_name << std::endl;  
-    std::cout << "Hello, " << name << std::endl;
-    return 0;
+
+    int num = 0;
+    cout << "Ingrese un numero: ";
+    cin >> num;
+    cout << "El cuadrado de: "<< num << " es: "<< square(num) <<endl;
+  
 }
 
 
