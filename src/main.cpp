@@ -1,15 +1,19 @@
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
+
 using namespace std;
 
 
-int main() {
-    double jovianYears;
-    cout << "Enter Jovian years: ";
-    cin >> jovianYears;
+int main() 
+{
+    char letter;
 
-    double earthYears = jovianYears * 12.0;
-    cout << "Equivalent Earth years: " << fixed << setprecision(1) << earthYears << endl;
-
+    for (letter = 'A'; letter <= 'z' ; letter++)
+    {
+        cout << letter << endl;
+        /* code */
+    }
+    
     return 0;
 }
