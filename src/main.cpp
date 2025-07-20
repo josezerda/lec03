@@ -8,21 +8,17 @@ using namespace std;
 
 int main() 
 {
-
-    int t, count;
-    for (t = 0; t < 10 ; t++)
+    for(int i=2;i<=100;i++)
     {
-        count = 1;
-        for(;;)
+        cout << "\nFactor of: "<< i << " is: ";
+        for(int j = 2; j <i ; j++)
         {
-            cout << count << " ";
-            count++;
-            if(count == 16)
+            if((i%j) == 0)
             {
-                cout << endl;
-                break;
-            }
+                cout << j << " ";
+            }       
         }
     }
+
     return 0;
 }
