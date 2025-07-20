@@ -10,6 +10,7 @@ int main()
 {
     for(int i=2;i<=100;i++)
     {
+        if (i == 50) goto stop;
         cout << "\nFactor of: "<< i << " is: ";
         for(int j = 2; j <i ; j++)
         {
@@ -19,6 +20,7 @@ int main()
             }       
         }
     }
+    stop: cout << "salgo en 50\n";
 
     return 0;
 }
