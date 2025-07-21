@@ -8,19 +8,21 @@ using namespace std;
 
 int main() 
 {
-    for(int i=2;i<=100;i++)
+    int sample[10];
+    int t = 0;
+
+    //cargamos el array
+    for(t=0;t<10;t++)
     {
-        if (i == 50) goto stop;
-        cout << "\nFactor of: "<< i << " is: ";
-        for(int j = 2; j <i ; j++)
-        {
-            if((i%j) == 0)
-            {
-                cout << j << " ";
-            }       
-        }
+        sample[t] = t + 1000 ;
+
     }
-    stop: cout << "salgo en 50\n";
+
+    //Mostramos contenido de array
+    for(t=0;t<10;t++)
+    {
+        cout << "El valor de sample[" << t << "]: " << sample[t] << endl;
+    }
 
     return 0;
 }
