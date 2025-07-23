@@ -8,21 +8,34 @@ using namespace std;
 
 int main() 
 {
-    int sample[10];
-    int t = 0;
+    int matriz[3][4];
 
-    //cargamos el array
-    for(t=0;t<10;t++)
+    int valor = 1, i, j;
+
+    for (i = 0; i < 3; i++)
     {
-        sample[t] = t + 1000 ;
-
+        for (j = 0; j < 4; j++)
+        {
+            matriz[i][j] = valor;
+            valor++;
+        }
+        
+        /* code */
     }
 
-    //Mostramos contenido de array
-    for(t=0;t<10;t++)
+    for (i = 0; i < 3; i++)
     {
-        cout << "El valor de sample[" << t << "]: " << sample[t] << endl;
+        for (j = 0; j < 4; j++)
+        {
+           cout << "[" << i << "][" << j << "]= " << matriz[i] [j]; 
+        }
+        cout << endl;
+        
+        /* code */
     }
+
+
+
 
     return 0;
 }
