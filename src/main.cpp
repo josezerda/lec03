@@ -1,41 +1,27 @@
 #include <iostream>
 #include <iomanip>
+#include <cstring>
 #include <cstdlib>
 #include <cmath>
+
 
 using namespace std;
 
 
 int main() 
 {
-    int matriz[3][4];
+    char str[80];
+    char aux[80];
+    int i = 0;
 
-    int valor = 1, i, j;
+    strcpy(str, "this is a test");
 
-    for (i = 0; i < 3; i++)
+    for(i=0; str[i]; i++)
     {
-        for (j = 0; j < 4; j++)
-        {
-            matriz[i][j] = valor;
-            valor++;
-        }
-        
-        /* code */
+        aux[i] = toupper(str[i]);
     }
-
-    for (i = 0; i < 3; i++)
-    {
-        for (j = 0; j < 4; j++)
-        {
-           cout << "[" << i << "][" << j << "]= " << matriz[i] [j]; 
-        }
-        cout << endl;
-        
-        /* code */
-    }
-
-
-
+    cout << "Texto original: "<< str << endl;
+    cout << "Texto modificado: "<< aux << endl;
 
     return 0;
 }
