@@ -10,18 +10,18 @@ using namespace std;
 
 int main() 
 {
-    char str[80];
-    char aux[80];
-    int i = 0;
+    int total;
+    int *ptr;
+    int val;
 
-    strcpy(str, "this is a test");
 
-    for(i=0; str[i]; i++)
-    {
-        aux[i] = toupper(str[i]);
-    }
-    cout << "Texto original: "<< str << endl;
-    cout << "Texto modificado: "<< aux << endl;
+    total = 3200;
+    ptr = &total;  //ptr gets the address of total
+
+    val = *ptr;     //val gets the value at that address
+
+    cout << "Total is; " << val << endl;
 
     return 0;
+
 }
