@@ -7,26 +7,29 @@
 
 using namespace std;
 
+void myfunc();
+void box (int length, int width, int height);
+
 
 int main() 
 {
-    int arr[10] = {1, 4, 2, 7, 4, 2, 9, 5, 2, 7};
-    cout << "Duplicate values found: ";
-    bool found = false;
+    cout << "In main()"<< endl;
+    
+    myfunc();
 
-    for (int i = 0; i < 10; i++) {
-        for (int j = i + 1; j < 10; j++) 
-        {
-            if (arr[i] == arr[j]) {
-                cout << arr[i] << " ";
-                found = true;
-                break; // Avoid repeating duplicates
-            }
-        }
-    }
+    cout << "Back in main()" << endl;
 
-    if (!found)
-        cout << "None.";
-    cout << endl;
+    box(5,5,5);
+
     return 0;
+}
+
+void myfunc()
+{
+    cout << "Inside myfunc()" << endl;
+}
+
+void box (int length, int width, int height)
+{
+    cout << "El resultado es: " << length * width * height << endl;
 }
