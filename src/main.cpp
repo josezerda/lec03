@@ -6,28 +6,38 @@
 
 using namespace std;
 
-
-void f_pointer (int *j);
-
+void display (int num[]);
 
 int main() 
 {
-    int i = 0;
-    int *p;
+    int t[10], i = 0;
+    for(i=0;i<10;i++)
+    {
+        t[i] = i;
+    }
 
-    p = &i;
-
-    cout << "Valor i antes de f_pointer: "<< i << endl;
-
-    f_pointer(p);
-
-    cout << "Valor i despues de f_pointer: "<< i << endl;
+    cout << "Valor t antes de display(): "<<endl; 
+    for (i=0;i<10;i++)
+    {
+        cout <<t[i]<< " ";
+    }
+    display(t);
+    cout << endl << "Valor t despues de display(): "<< endl;
+    for (i=0;i<10;i++)
+    {
+        cout <<t[i]<< " ";
+    }
+    cout << endl;
 
     return 0;
 }
 
 
-void f_pointer (int *j)
+void display (int num[])
 {
-    *j = 102;
+    int i;
+    for (i=0; i<10 ;i++)
+    {
+        num[i] = i * 2;
+    }
 }
