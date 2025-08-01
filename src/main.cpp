@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void display (int num[]);
+void display (int *n);
 
 int main() 
 {
@@ -33,11 +33,11 @@ int main()
 }
 
 
-void display (int num[])
+void display (int *n)
 {
     int i;
     for (i=0; i<10 ;i++)
     {
-        num[i] = i * 2;
+        n[i] = i * 2;
     }
 }
