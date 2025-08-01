@@ -6,38 +6,32 @@
 
 using namespace std;
 
-void display (int *n);
+void stringInverterCase (char * str);
 
 int main() 
 {
-    int t[10], i = 0;
-    for(i=0;i<10;i++)
-    {
-        t[i] = i;
-    }
-
-    cout << "Valor t antes de display(): "<<endl; 
-    for (i=0;i<10;i++)
-    {
-        cout <<t[i]<< " ";
-    }
-    display(t);
-    cout << endl << "Valor t despues de display(): "<< endl;
-    for (i=0;i<10;i++)
-    {
-        cout <<t[i]<< " ";
-    }
-    cout << endl;
-
+    char string[80];
+    strcpy (string, "This Is A Test");
+    cout << string << endl;
+    stringInverterCase(string);
+    cout << string << endl;
     return 0;
 }
 
 
-void display (int *n)
+void stringInverterCase (char * str)
 {
     int i;
-    for (i=0; i<10 ;i++)
+    for (i=0; *str ;i++)
     {
-        n[i] = i * 2;
+        if (isupper(*str))
+        {
+            *str = tolower(*str);
+        }
+        else
+        {
+            *str = toupper(*str);
+        }
+        str++;
     }
 }
