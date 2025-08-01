@@ -4,31 +4,30 @@
 #include <cstdlib>
 #include <cmath>
 
-
 using namespace std;
 
-double box (double x, double y, double z);
+
+void f_pointer (int *j);
 
 
 int main() 
 {
-    double answ = 0.0;
+    int i = 0;
+    int *p;
 
-    answ = box (3.3, 4.4, 5.5);
+    p = &i;
 
+    cout << "Valor i antes de f_pointer: "<< i << endl;
 
-    cout << "Volumen: "<< answ << endl;
+    f_pointer(p);
 
+    cout << "Valor i despues de f_pointer: "<< i << endl;
 
     return 0;
 }
 
 
-double box (double x, double y, double z)
+void f_pointer (int *j)
 {
-    double response;
-    response = x * y * z;
-
-    return response;
- 
+    *j = 102;
 }
