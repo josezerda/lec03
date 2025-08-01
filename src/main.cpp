@@ -7,29 +7,28 @@
 
 using namespace std;
 
-void myfunc();
-void box (int length, int width, int height);
+double box (double x, double y, double z);
 
 
 int main() 
 {
-    cout << "In main()"<< endl;
-    
-    myfunc();
+    double answ = 0.0;
 
-    cout << "Back in main()" << endl;
+    answ = box (3.3, 4.4, 5.5);
 
-    box(5,5,5);
+
+    cout << "Volumen: "<< answ << endl;
+
 
     return 0;
 }
 
-void myfunc()
-{
-    cout << "Inside myfunc()" << endl;
-}
 
-void box (int length, int width, int height)
+double box (double x, double y, double z)
 {
-    cout << "El resultado es: " << length * width * height << endl;
+    double response;
+    response = x * y * z;
+
+    return response;
+ 
 }
