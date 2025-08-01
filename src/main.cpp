@@ -6,32 +6,40 @@
 
 using namespace std;
 
-void stringInverterCase (char * str);
+char *get_substr(char *sub, char *str);
 
 int main() 
 {
-    char string[80];
-    strcpy (string, "This Is A Test");
-    cout << string << endl;
-    stringInverterCase(string);
-    cout << string << endl;
+    char *substr;
+
+    substr = get_substr("tres", "uno dos tres cuatro");
+
+    cout << "Substring found: " << substr << endl;
+    
     return 0;
 }
 
-
-void stringInverterCase (char * str)
+char *get_substr(char *sub, char *str)
 {
-    int i;
-    for (i=0; *str ;i++)
+    int t;
+    char *p, *p2, *start;
+
+    for(t=0; str[t]; t++)
     {
-        if (isupper(*str))
+        p = &str[t];
+        start = p;
+        p2 = sub;
+        while (*p2 && *p2==*p)
         {
-            *str = tolower(*str);
+            p++;
+            p2++;
+            /* code */
         }
-        else
+        if(!*p2)
         {
-            *str = toupper(*str);
+            return start;
         }
-        str++;
+       
     }
+    return 0;
 }
