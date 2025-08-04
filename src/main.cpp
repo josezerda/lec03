@@ -6,40 +6,23 @@
 
 using namespace std;
 
-char *get_substr(char *sub, char *str);
 
-int main() 
+
+int main(int argc, char *argv[])
 {
-    char *substr;
-
-    substr = get_substr("tres", "uno dos tres cuatro");
-
-    cout << "Substring found: " << substr << endl;
-    
-    return 0;
-}
-
-char *get_substr(char *sub, char *str)
-{
-    int t;
-    char *p, *p2, *start;
-
-    for(t=0; str[t]; t++)
+    double a, b;
+    if (argc != 3)
     {
-        p = &str[t];
-        start = p;
-        p2 = sub;
-        while (*p2 && *p2==*p)
-        {
-            p++;
-            p2++;
-            /* code */
-        }
-        if(!*p2)
-        {
-            return start;
-        }
-       
+        cout << "Usage: lec03 num1 num2" << endl;
+        return 1;    
     }
+
+    a = atof(argv[1]);
+    b = atof(argv[2]);
+
+    cout << "Result: " << a + b << endl;
+    
+
+    
     return 0;
 }
