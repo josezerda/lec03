@@ -7,22 +7,24 @@
 using namespace std;
 
 
+int factr (int n);
 
-int main(int argc, char *argv[])
+
+
+int main()
 {
-    double a, b;
-    if (argc != 3)
-    {
-        cout << "Usage: lec03 num1 num2" << endl;
-        return 1;    
-    }
-
-    a = atof(argv[1]);
-    b = atof(argv[2]);
-
-    cout << "Result: " << a + b << endl;
-    
-
+    //Use recursive version
+    cout << "Factorial recursive: " << factr(5) << endl;
     
     return 0;
+}
+
+
+int factr (int n)
+{
+    int valor;
+    if (n == 1)
+        return n;
+    valor = factr (n -1) * n;
+    return valor;
 }
