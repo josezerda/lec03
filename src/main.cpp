@@ -6,25 +6,24 @@
 
 using namespace std;
 
-
-int factr (int n);
-
-
+double &f(); //return a reference
+double val = 100.1;
 
 int main()
 {
-    //Use recursive version
-    cout << "Factorial recursive: " << factr(5) << endl;
-    
+    double x;
+    cout << f() << endl;
+
+    x = f();    //assign value of val to x
+    cout << x << endl;
+
+    f() = 99.1; //change val's new value
+    cout << f() << endl;
     return 0;
 }
 
 
-int factr (int n)
+double &f()
 {
-    int valor;
-    if (n == 1)
-        return n;
-    valor = factr (n -1) * n;
-    return valor;
+    return val;
 }
