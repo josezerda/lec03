@@ -6,24 +6,31 @@
 
 using namespace std;
 
-double &f(); //return a reference
-double val = 100.1;
+double &change_it (int i, double *ptr);
+
 
 int main()
 {
-    double x;
-    cout << f() << endl;
+    double vals[] = {1.1, 2.2, 3.3, 4.4, 5.5};
 
-    x = f();    //assign value of val to x
-    cout << x << endl;
+    int i;
 
-    f() = 99.1; //change val's new value
-    cout << f() << endl;
+    for (i = 0; i < 5; i++)
+    {
+        cout << vals[i] << " ";
+    }
+    change_it(0, vals) = 33.33;
+    change_it(4, vals) = 66.66;
+
+    cout << "\n";
+    for (i = 0; i < 5; i++)
+    {
+        cout << vals[i] << " ";
+    }    
     return 0;
 }
 
-
-double &f()
+double &change_it (int i, double *ptr)
 {
-    return val;
+    return ptr[i];
 }
