@@ -6,31 +6,29 @@
 
 using namespace std;
 
-double &change_it (int i, double *ptr);
+void f(int i);
+void f(int i, int j);
+void f(double k);
 
 
 int main()
 {
-    double vals[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+    f(3);
+    f(6, 6);
+    f(9.999);
 
-    int i;
-
-    for (i = 0; i < 5; i++)
-    {
-        cout << vals[i] << " ";
-    }
-    change_it(0, vals) = 33.33;
-    change_it(4, vals) = 66.66;
-
-    cout << "\n";
-    for (i = 0; i < 5; i++)
-    {
-        cout << vals[i] << " ";
-    }    
     return 0;
 }
 
-double &change_it (int i, double *ptr)
+void f(int i)
 {
-    return ptr[i];
+    cout << "In f(int), i is: " << i <<endl;
+}
+void f(int i, int j)
+{
+    cout << "In f(int, int), i is: " << i << " J is "<< j << endl;
+}
+void f(double k)
+{
+    cout << "In f(double), k is: " << k <<endl;
 }
