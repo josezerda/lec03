@@ -6,29 +6,34 @@
 
 using namespace std;
 
-void f(int i);
-void f(int i, int j);
-void f(double k);
-
+double running_avg( int i);
 
 int main()
 {
-    f(3);
-    f(6, 6);
-    f(9.999);
+    int num;
+
+    do
+    {
+        cout << "Enter numbers (-1 to quit): ";
+        cin >> num;
+        if (num != -1)
+            cout << "Running average is: " << running_avg (num);
+        cout << endl;
+        /* code */
+    } while (num > -1);
 
     return 0;
 }
 
-void f(int i)
+double running_avg( int i)
 {
-    cout << "In f(int), i is: " << i <<endl;
+    int count = 0;
+    double sum = 0.0;
+
+    sum = sum + i;
+    count++;
+    return sum/(float)count;
+
 }
-void f(int i, int j)
-{
-    cout << "In f(int, int), i is: " << i << " J is "<< j << endl;
-}
-void f(double k)
-{
-    cout << "In f(double), k is: " << k <<endl;
-}
+
+
