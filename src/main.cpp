@@ -6,28 +6,31 @@
 
 using namespace std;
 
-double running_avg( int i);
-void reset();
+// Declare a vehicle class
+class Vehicle
+{
+public:
+    int passengers;
+    int fuelcap;
+    int mph;
+    
+};
+
 
 int main()
 {
-    int num;
+    Vehicle minivan;
+    int range;
 
-    do
-    {
-        cout << "Enter numbers (-1 to quit, -2 to reset): ";
-        cin >> num;
-        if (num == -2)
-        {
-            reset();
-            continue;        
-        }
+    //Assign values to fields in minivan
+    minivan.passengers = 7;
+    minivan.fuelcap = 16;   // galones
+    minivan.mph = 21;       //millas por galon
 
-        if (num != -1)
-            cout << "Running average is: " << running_avg (num);
-        cout << endl;
-        /* code */
-    } while (num != -1);
+    range = minivan.fuelcap * minivan.mph;
+
+    // Compute
+    cout << "Minivan can carry " << minivan.passengers << " a range of: " << range << " miles away" << endl;
 
     return 0;
 }
