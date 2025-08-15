@@ -7,6 +7,7 @@
 using namespace std;
 
 double running_avg( int i);
+void reset();
 
 int main()
 {
@@ -14,26 +15,19 @@ int main()
 
     do
     {
-        cout << "Enter numbers (-1 to quit): ";
+        cout << "Enter numbers (-1 to quit, -2 to reset): ";
         cin >> num;
+        if (num == -2)
+        {
+            reset();
+            continue;        
+        }
+
         if (num != -1)
             cout << "Running average is: " << running_avg (num);
         cout << endl;
         /* code */
-    } while (num > -1);
+    } while (num != -1);
 
     return 0;
 }
-
-double running_avg( int i)
-{
-    int count = 0;
-    double sum = 0.0;
-
-    sum = sum + i;
-    count++;
-    return sum/(float)count;
-
-}
-
-
