@@ -13,8 +13,16 @@ public:
     int passengers;
     int fuelcap;
     int mph;
-    
+
+    int range(); //compute and return the range
 };
+
+//Implement the range member function
+
+int Vehicle::range()
+{
+    return mph*fuelcap;
+}
 
 
 int main()
@@ -35,9 +43,9 @@ int main()
     sportscar.mph = 12;       //millas por galon
 
 
-
-    range1 = minivan.fuelcap * minivan.mph;
-    range2 = sportscar.fuelcap * sportscar.mph;
+    //Compute
+    range1 = minivan.range();
+    range2 = sportscar.range();
 
     // Compute
     cout << "Minivan can carry " << minivan.passengers << " passangers a range of: " << range1 << " miles away" << endl;
